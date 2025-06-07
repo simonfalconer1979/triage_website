@@ -5,6 +5,36 @@ This file contains all the prompts you can use with Claude (5.7 or later) to bui
 
 ---
 
+## 🔍 0. Problem & Solution Overview
+
+**Prompt**:
+```
+Design content that explains the value proposition of Triage Diagnostics, focusing on:
+
+### The Problem
+- Remote/hybrid/distributed IT support challenges
+- Lack of visibility into user systems
+- Fragmented diagnostic tools
+- Time delays in gathering technical information
+- Inconsistent diagnostic data
+- Limited permissions for remote users
+
+### The Solution
+- One-click system diagnostics tool
+- Complete system snapshot capabilities
+- Built-in network diagnostics
+- Standardized PDF reports
+- Auto-email functionality
+- Customizable deployment options
+- Preference-driven data capture
+
+### Benefits
+- For IT Teams: Reduced back-and-forth, improved diagnosis accuracy, empowered L1 staff, faster resolution
+- For End Users: Simplified process, less downtime, faster fixes
+```
+
+---
+
 ## 🧱 1. Project Scaffold
 
 **Prompt**:
@@ -70,7 +100,8 @@ Use secure cookie sessions and error handling for login failures.
 Integrate Stripe Checkout into the app. After a successful payment:
 - Store the purchase in PostgreSQL with userId, amount, and sessionId
 - Trigger a webhook to create a license via LicenseSpring
-- so add Stripe Customer Portal access from the dashboard for reoccuring billing and licence and entitlement changes - this should be a fully self-service portal
+- Send an automatic email to the user with their license key and usage instructions
+- Add Stripe Customer Portal access from the dashboard for recurring billing and license/entitlement management - this should be a fully self-service portal
 ```
 
 ---
@@ -80,9 +111,10 @@ Integrate Stripe Checkout into the app. After a successful payment:
 **Prompt**:
 ```
 Create a webhook handler for Stripe events. On successful checkout:
-- Use LicenseSpring’s API to provision a new license
+- Use LicenseSpring's API to provision a new license
 - Store the returned licenseKey and related fields in PostgreSQL
-- Connect it to the user’s account
+- Connect it to the user's account
+- Send a welcome/confirmation email with license key and setup instructions
 
 Use `LICENSESPRING_API_KEY` and `PRODUCT_CODE` from env.
 Implement error handling and retry logic for API failures.
@@ -133,6 +165,8 @@ Create a responsive user dashboard using Tailwind:
 - Link to Stripe Customer Portal
 - Show list of device entitlements with assignedAt date
 - Include a button to "Buy License" (calls Stripe Checkout)
+- Display license usage statistics and history
+- Add a section for downloading the Triage Diagnostics application
 ```
 
 ---
