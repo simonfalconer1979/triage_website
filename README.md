@@ -45,7 +45,7 @@ Triage Diagnostics gives helpdesk teams a powerful, one-click tool to collect co
 ## 🌐 Live Site
 
 [https://www.thetriageapp.com](https://www.thetriageapp.com)  
-Hosted on a self-managed **aaPanel** Node.js server with PM2 process control.
+Hosted on a self-managed or hosted **aaPanel** Node.js server with PM2 process control.
 
 ---
 
@@ -194,5 +194,6 @@ LICENSESPRING_PRODUCT_CODE=your_product_code
 
 ## 🧠 About
 
-Built and maintained by [Kahu Software](https://github.com/simonfalconer1979).  
+Built and maintained by [Kahu Group Ltd]
+(https://github.com/simonfalconer1979).  
 Licensed software product. All rights reserved.
